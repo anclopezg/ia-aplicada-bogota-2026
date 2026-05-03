@@ -825,6 +825,42 @@
             text-decoration: none;
             border-bottom: 1px dashed rgba(240,240,250,0.3);
         }
+
+        .qr-code {
+            width: 160px;
+            height: 160px;
+            border: 2px solid rgba(240,240,250,0.1);
+            border-radius: 8px;
+            background: #fff;
+            padding: 8px;
+            display: inline-block;
+        }
+        .qr-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .qr-container p {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            margin-top: 0.8rem;
+        }
+        .qr-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .qr-item {
+            text-align: center;
+        }
+        .qr-item p {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-top: 0.8rem;
+        }
+
     </style>
 </head>
 <body>
@@ -1052,6 +1088,57 @@
                 <span class="highlight">No necesitas entender las matemáticas</span> para usar estas herramientas. Solo necesitas saber <span class="highlight-v">cuándo y cómo aplicarlas</span> en tu negocio.
             </p>
         </div>
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- 7b. APRENDIZAJE SUPERVISADO Y NO SUPERVISADO    -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="aprendizaje" class="grad-mixed">
+        <div class="section-inner">
+            <div class="section-label reveal-left">Machine Learning</div>
+            <h2 class="section-title reveal-left delay-1">Aprendizaje<br>Supervisado vs<br>No Supervisado</h2>
+            <p class="section-subtitle reveal-up delay-2">La IA aprende de dos formas principales. <span class="highlight">Con ejemplos</span> (supervisado) o <span class="highlight-v">sola, explorando datos</span> (no supervisado).</p>
+            <div class="divider line-draw delay-2"></div>
+        </div>
+
+        <!-- SUPERVISADO -->
+        <div class="section-inner" style="margin-top: 2rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 800; letter-spacing: 0.05em; color: var(--cyan); margin-bottom: 1.5rem; text-align: center;" class="reveal-up">🎯 Aprendizaje Supervisado</h3>
+            <p class="section-subtitle reveal-up" style="text-align: center;">Le enseñamos a la máquina con <strong>datos etiquetados</strong>: "esto es un gato", "esto es un perro", "esta factura es legítima", "esta es fraudulenta."</p>
+            <div class="grid-2 reveal-scale">
+                <div class="feature">
+                    <h4>📸 Clasificación de Imágenes</h4>
+                    <p>Entrena un modelo con fotos etiquetadas para que aprenda a distinguir categorías por sí solo.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Ejemplo:</strong> 200 fotos de fruta "buena" y 200 de fruta "dañada" → el modelo aprende a detectar defectos en la línea de producción.</p>
+                </div>
+                <div class="feature" style="border-color: var(--green);">
+                    <h4 style="color: var(--green);">📊 Regresión y Predicción</h4>
+                    <p>Datos históricos con resultados conocidos → el modelo aprende a predecir valores futuros.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Ejemplo:</strong> 12 meses de ventas → predicción del mes 13. Datos de clima + producción → rendimiento esperado de la cosecha.</p>
+                </div>
+            </div>
+            <div class="qr-container reveal-fade">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://teachablemachine.withgoogle.com/&color=00e5ff&bgcolor=ffffff" alt="QR Teachable Machine" class="qr-code">
+                <p>📱 Escanea para probar Google Teachable Machine — entrena tu primer modelo de IA en 5 minutos, sin código</p>
+            </div>
+        </div>
+
+        <!-- NO SUPERVISADO -->
+        <div class="section-inner" style="margin-top: 3rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 800; letter-spacing: 0.05em; color: var(--violet); margin-bottom: 1.5rem; text-align: center;" class="reveal-up">🔬 Aprendizaje No Supervisado</h3>
+            <p class="section-subtitle reveal-up" style="text-align: center;">La máquina <strong>explora los datos sin etiquetas</strong> y encuentra patrones, grupos y anomalías que nosotros no vemos.</p>
+            <div class="grid-2 reveal-scale">
+                <div class="feature" style="border-color: var(--violet);">
+                    <h4 style="color: var(--violet);">🔗 Clustering (Agrupamiento)</h4>
+                    <p>Segmenta clientes por comportamiento sin que nadie le diga los grupos. Encuentra patrones de compra, perfiles de consumo, zonas geográficas similares.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Herramienta:</strong> K-Means en scikit-learn · Google Sheets + extensión ML.</p>
+                </div>
+                <div class="feature" style="border-color: var(--gold);">
+                    <h4 style="color: var(--gold);">⚠️ Detección de Anomalías</h4>
+                    <p>Identifica transacciones raras, productos fuera de norma, comportamientos atípicos — sin saber de antemano qué buscar.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Ejemplo:</strong> Un banco detecta transacciones fraudulentas porque son "diferentes" al patrón normal del cliente.</p>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80" alt="Machine Learning" class="section-image reveal-scale" style="max-height: 200px;">
+        </div>
     </section>
 
     <!-- ════════════════════════════════════════════════ -->
@@ -1090,6 +1177,7 @@
                     <div class="stat-label">Más rápido deciden las empresas orientadas a datos</div>
                 </div>
             </div>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Dashboards y datos" class="section-image reveal-scale delay-5" style="max-height: 200px;">
         </div>
     </section>
 
@@ -1127,7 +1215,7 @@
                     <p style="margin-top: 0.5rem;"><strong>Herramienta:</strong> Regresión logística en Python · Clasificadores en Azure ML Studio (gratuito).</p>
                 </div>
             </div>
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Análisis predictivo" class="section-image reveal-scale delay-5" style="max-height: 200px;">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Análisis predictivo" class="section-image reveal-scale delay-5" style="max-height: 200px;">
         </div>
     </section>
 
@@ -1262,6 +1350,7 @@
             <p class="source reveal-fade delay-7">
                 Estos son casos reales de empresas colombianas que usan optimización con herramientas gratuitas.
             </p>
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" alt="Optimización logística" class="section-image reveal-scale delay-6" style="max-height: 200px;">
         </div>
     </section>
 
@@ -1273,7 +1362,10 @@
             <span class="badge badge-ia reveal-fade">Bloque 2</span>
             <h2 class="section-title reveal-left delay-1" style="margin-top: 1rem;">Inteligencia Artificial:<br>Tu Empleado Digital<br>que No Duerme</h2>
             <p class="section-subtitle reveal-up delay-2">No necesitas ser programador. No necesitas invertir millones. Solo necesitas saber <span class="highlight-v">pedirle a la máquina lo que necesitas</span>.</p>
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="Inteligencia Artificial" class="section-image reveal-scale delay-3" style="max-height: 220px;">
+            <div class="grid-2 reveal-scale delay-3" style="margin-top: 2rem;">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="IA" class="section-image reveal-scale" style="max-height: 200px;">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="Robot" class="section-image reveal-scale" style="max-height: 200px;">
+            </div>
         </div>
     </section>
 
@@ -1303,6 +1395,7 @@
                 <a href="https://claude.ai" target="_blank" class="text-link">Claude</a> ·
                 <a href="https://gamma.app" target="_blank" class="text-link">Gamma</a>
             </p>
+            <img src="https://images.unsplash.com/photo-1676299081847-824916de3048?w=1200&q=80" alt="ChatGPT" class="section-image reveal-scale delay-6" style="max-height: 180px;">
         </div>
     </section>
 
@@ -1579,6 +1672,10 @@
                 <h4>Confianza Digital</h4>
                 <p>5 preguntas sobre blockchain y regulaciones. EUDR, trazabilidad, herramientas. ¡Vamos por el podio!</p>
             </div>
+            <div class="qr-container reveal-fade">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.vechain.org&color=00e5ff&bgcolor=ffffff" alt="QR VeChain" class="qr-code">
+                <p>📱 Explora VeChain — plataforma de trazabilidad blockchain para empresas</p>
+            </div>
         </div>
     </section>
 
@@ -1590,6 +1687,7 @@
             <span class="badge badge-actividad reveal-fade">Bloque 4 — Taller Práctico</span>
             <h2 class="section-title reveal-left delay-1" style="margin-top: 1rem;">Actividades<br>del Taller</h2>
             <p class="section-subtitle reveal-up delay-2">De pie. En grupo. Probando herramientas. Así es como se aprende.</p>
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80" alt="Taller práctico" class="section-image reveal-scale delay-3" style="max-height: 180px;">
         </div>
 
         <!-- Actividad: Verdadero o Falso -->
@@ -1940,6 +2038,43 @@
         </div>
     </section>
 
+    <!-- ════════════════════════════════════════════════ -->
+    <!-- HERRAMIENTAS QR                                  -->
+    <!-- ════════════════════════════════════════════════ -->
+    <section id="herramientas-qr" class="grad-green">
+        <div class="section-inner">
+            <div class="section-label reveal-left">Herramientas</div>
+            <h2 class="section-title reveal-left delay-1">Prueba Estas<br>Herramientas<br>Ahora Mismo</h2>
+            <p class="section-subtitle reveal-up delay-2">Escanea con tu celular. Todas son gratuitas. Todas funcionan hoy.</p>
+            <div class="divider line-draw delay-2"></div>
+            <div class="qr-grid reveal-scale">
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://teachablemachine.withgoogle.com/&color=00e5ff&bgcolor=ffffff" alt="QR Teachable Machine" class="qr-code">
+                    <p>Google Teachable Machine</p>
+                </div>
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://chat.openai.com&color=7c4dff&bgcolor=ffffff" alt="QR ChatGPT" class="qr-code">
+                    <p>ChatGPT</p>
+                </div>
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://qgis.org&color=00e676&bgcolor=ffffff" alt="QR QGIS" class="qr-code">
+                    <p>QGIS</p>
+                </div>
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://claude.ai&color=ff6b35&bgcolor=ffffff" alt="QR Claude" class="qr-code">
+                    <p>Claude AI</p>
+                </div>
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://trends.google.com&color=ffd700&bgcolor=ffffff" alt="QR Google Trends" class="qr-code">
+                    <p>Google Trends</p>
+                </div>
+                <div class="qr-item">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://forms.cloud.microsoft.com/r/paHNdsXT2d&color=00e5ff&bgcolor=ffffff" alt="QR Registro" class="qr-code">
+                    <p>Registro de Asistencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- ════════════════════════════════════════════════ -->
     <!-- 27. CIERRE IMPACTANTE                            -->
     <!-- ════════════════════════════════════════════════ -->
